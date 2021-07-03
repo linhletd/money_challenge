@@ -117,7 +117,7 @@ function handleFilterEvent(request, response){
 }
 
 
-function responseWithPaginatedData({page, size}, maxPage, response, cached, cacheKey){
+function responseWithPaginatedData({page, size}, maxPage, response, cacheKey){
   const start = (page - 1) * size + 1;
   const end = page === maxPage ? theState.getCurIdx() : page * size;
   const promiseArray = [];
