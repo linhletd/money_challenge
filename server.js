@@ -60,7 +60,7 @@ client.on('connect',()=>{
 
 
 const requestHandler = (request, response)=>{
-  // const {url, method} = request;
+  const {url} = request;
   // console.log(url, method);
   if(url === '/event/create'){
     handlePostEvent(request, response)
